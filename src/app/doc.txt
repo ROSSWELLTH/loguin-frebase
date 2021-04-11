@@ -71,3 +71,5 @@ https://firebase.google.com/docs/reference/rest/auth#section-create-email-passwo
 proteger ruta con el guar
 
 se ajusta html del home y se genera la eliminacion del token en el componente
+
+prueba
