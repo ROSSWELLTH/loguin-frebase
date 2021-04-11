@@ -1,0 +1,73 @@
+***generamos 3 modulos
+
+-loguin
+-home
+-registro
+-usuarioModel  creamos una carpeta llamada model en App y creamos usuarioModel.ts
+
+***instalar libreria para que muestre alerta
+
+npm install sweetalert2
+
+***configuramos el index
+
+-añadimos las rutas de los archivos asset
+
+js
+ccs
+boostra
+font-asowe
+-agregamos los archivos a la carpetas asset
+
+***congiguramos el formulario del registro
+
+ <form (ngSubmit)="onSubmit( f )"   #f="ngForm"   class="login100-form validate-form flex-sb flex-w">
+
+
+importamos
+import {NgForm} from '@angular/forms'; en el componente
+
+tambien importamos la ruta del formulario en el mudulo
+
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule
+  ],
+
+  ***configuramos las rutas en el AppRoutingModule
+
+  const routes: Routes = [
+
+  // { path: 'home'    , component: HomeComponent, canActivate: [ AuthGuard ] },
+  { path: 'home'    , component: HomeComponent},
+  { path: 'registro', component: RegistroComponent },
+  { path: 'login'   , component: LoginComponent },
+  { path: '**', redirectTo: 'registro' }
+
+];
+
+***generamos servicion de autentica
+
+importamos en el modulos
+
+import { HttpClientModule } from '@angular/common/http';
+
+en el import del modulo colocar
+HttpClientModule
+
+ng g s service/autentica
+
+crear un proyector ir a autenticacion
+metodo de entrada : correo/contraseña
+
+ir a este link para validar la documentacion capitulo 173
+
+https://firebase.google.com/docs/reference/rest/auth#section-create-email-password
+
+***hacer validaciones para recordar usuario
+
+**
+proteger ruta con el guar
+
+se ajusta html del home y se genera la eliminacion del token en el componente
